@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Popup</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            font-family: Arial, sans-serif;
+        }
+        
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            animation: popUp 1s ease-in-out;
+        }
+        
+        .heart {
+            animation: heartbeat 1s infinite;
+        }
+        
+        @keyframes popUp {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        #M{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <h2>🎂 Happy Birthday to My SAJANI! 🎉</h2>
+        <p>Wishing you a day filled with love and joy.</p>
+        <p>May your heart be as happy as the dancing hearts!</p>
+        <div class="heart">❤️</div>
+        <div id="M"><strong>From: Vijay Rathod</strong></div>
+    </div>
+</body>
+</html>
