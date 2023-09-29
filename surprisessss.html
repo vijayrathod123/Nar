@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Popups Example</title>
+    <style>
+        /* Styles for the popups */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Styles for the buttons */
+        .button {
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button class="button" onclick="showFirstPopup()">Do you want to know a Secret?</button>
+
+    <!-- First Popup -->
+    <div id="popup1" class="popup-container">
+        <div class="popup">
+            <p>Ashwin Chutiya hai. Do you want to know another secret?</p>
+            <button class="button" onclick="showSecondPopup()">Yes</button>
+            <button class="button" onclick="closePopup('popup1')">No</button>
+        </div>
+    </div>
+
+    <!-- Second Popup -->
+    <div id="popup2" class="popup-container">
+        <div class="popup">
+            <p>Chutiya hai wo important nahi hai RV ka beta hai wo important hai. Do you want to know a big secret?</p>
+            <button class="button" onclick="showSurprisePopup()">Yes</button>
+            <button class="button" onclick="closePopup('popup2')">No</button>
+        </div>
+    </div>
+
+    <!-- Surprise Popup -->
+    <div id="popup3" class="popup-container">
+        <div class="popup">
+            <p>Ashwin goes to beauty parlour every month to do eyebrows & Makeup!</p>
+            <button class="button" onclick="closePopup('popup3')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        function showFirstPopup() {
+            document.getElementById("popup1").style.display = "block";
+        }
+
+        function showSecondPopup() {
+            document.getElementById("popup2").style.display = "block";
+        }
+
+        function showSurprisePopup() {
+            document.getElementById("popup3").style.display = "block";
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = "none";
+        }
+    </script>
+</body>
+</html>
